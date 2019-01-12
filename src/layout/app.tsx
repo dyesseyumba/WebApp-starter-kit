@@ -9,7 +9,7 @@ import { MenuTests } from 'menuTests';
 // @ts-ignore no relevant error
 import * as logo from '../images/logo.png';
 import { User } from 'oidc-client';
-import { RedirectToAuth, userManager } from 'identity';
+// import { RedirectToAuth, userManager } from 'identity';
 
 const { Sider, Content, Footer } = Layout;
 
@@ -30,10 +30,10 @@ class App extends React.PureComponent<{}, AppState> {
     this.setState({ collapsed: !collapsed });
   };
 
-  public isAuthenticated = (): boolean => {
-    const { user } = this.state;
-    return user && !user.expired;
-  };
+  // public isAuthenticated = (): boolean => {
+  //   const { user } = this.state;
+  //   return user && !user.expired;
+  // };
 
   public render() {
     const { collapsed } = this.state;
@@ -65,14 +65,14 @@ class App extends React.PureComponent<{}, AppState> {
               overflow: 'initial'
             }}
           >
-            {this.isAuthenticated() && (
-              <Switch>
-                <Route path="/main/child" component={MenuTests} />
+            {/* {this.isAuthenticated() && ( */}
+            <Switch>
+              <Route path="/main/child" component={MenuTests} />
 
-                <Route component={Page404} />
-              </Switch>
-            )}
-            {!this.isAuthenticated() && (
+              <Route component={Page404} />
+            </Switch>
+            {/* )} */}
+            {/* {!this.isAuthenticated() && (
               <Switch>
                 <Route
                   render={() => (
@@ -81,7 +81,7 @@ class App extends React.PureComponent<{}, AppState> {
                   )}
                 />
               </Switch>
-            )}
+            )} */}
           </Content>
           <Footer style={{ textAlign: 'center' }}>Web Starter kit © 2018 FnStack, Inc.</Footer>
         </Layout>

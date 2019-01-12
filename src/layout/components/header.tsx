@@ -60,7 +60,7 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
         <div className="rightWarpper">
           {/* To do: Uncoment this when identity server is set. */}
           {/* {isAuthenticated && ( */}
-          <Menu mode="horizontal" style={{ lineHeight: '64px' }}>
+          {/* <Menu mode="horizontal" style={{ lineHeight: '64px' }}>
             <SubMenu
               style={{
                 float: 'right'
@@ -76,7 +76,7 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
                 Se déconnecter
               </Menu.Item>
             </SubMenu>
-          </Menu>
+          </Menu> */}
           {/* )} */}
           {/* {!isAuthenticated && (
             <Button type="primary" icon="login" onClick={this.handleOnLogin}>
